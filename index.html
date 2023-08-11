@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expenditute</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+       
+        <form onsubmit="return submitForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+         
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" class="place-input" required>
+
+      
+            <label for="money">Money:</label>
+            <input type="number" id="money" name="money" required>
+          
+            
+            <button type="submit">Submit</button>
+
+            <button onclick="downloadLocalStoragePDF()">Download</button>
+
+        </form>
+
+        <h2>Data</h2>
+        <div id="tableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Place</th>
+                        <th>Money</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+
+        <h2>Summary by Name</h2>
+        <div id="summaryTableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Total Money</th>
+                    </tr>
+                </thead>
+                <tbody id="summaryTableBody"></tbody>
+            </table>
+        </div>
+        
+
+
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+    
+
+
+
+</body>
+</html>
